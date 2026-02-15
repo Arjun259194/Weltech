@@ -50,12 +50,12 @@ const CurvedBadgeCard = ({ title, content, icon }: Props) => {
         {/* Floating Circle */}
         <div className="
         absolute scale-125 bottom-0 right-0 -translate-y-[127%] -translate-x-3
-        shadow-[50px_50px_0px_0px_#e4e4e4]
+        shadow-[50px_50px_0px_0px_#fff]
         w-24 aspect-square rounded-full
         " />
         <div className="
         absolute scale-125 bottom-0 right-0 -translate-x-[127%] -translate-y-3
-        shadow-[50px_50px_0px_0px_#e4e4e4]
+        shadow-[50px_50px_0px_0px_#fff]
         w-24 aspect-square rounded-full 
         " />
         <div className="absolute scale-[1.3] bottom-0 right-0 w-24 aspect-square bg-background rounded-full" />

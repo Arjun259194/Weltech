@@ -15,7 +15,7 @@ const HeroSection = (props: Props) => {
           <Button>
             <span>Get Started</span> <ChevronRight size={16} />
           </Button>
-          <Button variant="ghost">
+          <Button className="border border-background" variant="ghost">
             <span>Learn More </span> <ChevronRight size={16} />
           </Button>
         </div>

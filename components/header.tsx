@@ -4,16 +4,28 @@ async function Header() {
       <span className="text-2xl font-semibold">Weltech</span>
       <nav>
         <ul className="flex space-x-10">
-          <li className="hover:underline hover:underline-offset-2"><a href="/home">Home</a></li>
-          <li className="hover:underline hover:underline-offset-2"><a href="/about">About</a></li>
-          <li className="hover:underline hover:underline-offset-2"><a href="/plan">Plan</a></li>
-          <li className="hover:underline hover:underline-offset-2"><a href="/admission">Admission</a></li>
-          <li className="hover:underline hover:underline-offset-2"><a href="/materiels">Materiels</a></li>
-          <li className="hover:underline hover:underline-offset-2"><a href="/contact">Contact</a></li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/home">Home</a>
+          </li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/about">About</a>
+          </li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/plan">Plan</a>
+          </li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/admission">Admission</a>
+          </li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/materiels">Materiels</a>
+          </li>
+          <li className="hover:underline hover:underline-offset-2">
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 };
 
 const ptSerif = PT_Serif({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -32,12 +32,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={`${ptSerif.className} ${caveat.variable}  antialiased`}
-      >
+      <body className={`${ptSerif.className} ${caveat.variable}  antialiased`}>
         <Header />
         {children}
       </body>

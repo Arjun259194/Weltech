@@ -2,9 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
 @theme inline {
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
 
   @keyframes scroll {
     to {
@@ -28,7 +28,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
 
 .caveat-600 {
   font-family: "Caveat", cursive;
@@ -86,7 +85,7 @@
   --radius: 0.625rem;
 
   /* Background (White/Grey) */
-  --background: oklch(1 0 0); 
+  --background: oklch(1 0 0);
   --foreground: oklch(0.28 0.04 255);
 
   --card: oklch(0.98 0 0);
@@ -121,7 +120,7 @@
   /* Charts mapped to palette */
   --chart-1: oklch(0.62 0.19 257); /* primary */
   --chart-2: oklch(0.42 0.08 255); /* secondary */
-  --chart-3: oklch(0.82 0.17 85);  /* accent */
+  --chart-3: oklch(0.82 0.17 85); /* accent */
   --chart-4: oklch(0.72 0.14 257);
   --chart-5: oklch(0.55 0.1 255);
 

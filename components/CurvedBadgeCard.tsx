@@ -1,16 +1,20 @@
-"use client"
+"use client";
 import { ReactNode, SVGProps } from "react";
 import { motion } from "motion/react";
 
 interface Props {
-  title: string,
-  content: string,
-  icon: ReactNode
+  title: string;
+  content: string;
+  icon: ReactNode;
 }
 
-const Tie = ({ w = 40, h = 70, ...props }: {
-  w?: number,
-  h?: number,
+const Tie = ({
+  w = 40,
+  h = 70,
+  ...props
+}: {
+  w?: number;
+  h?: number;
 } & SVGProps<SVGSVGElement>) => (
   <svg
     width={w}
@@ -40,7 +44,6 @@ const CurvedBadgeCard = ({ title, content, icon }: Props) => {
   return (
     <div className="relative w-full h-90 overflow-hidden  rounded-[2.5rem]">
       <div className="p-5 bg-blue-600 h-full w-full">
-
         <div className="space-y-5 text-white">
           <Tie />
           <h3 className="text-2xl font-semibold">{title}</h3>
@@ -48,16 +51,20 @@ const CurvedBadgeCard = ({ title, content, icon }: Props) => {
         </div>
 
         {/* Floating Circle */}
-        <div className="
+        <div
+          className="
         absolute scale-125 bottom-0 right-0 -translate-y-[127%] -translate-x-3
         shadow-[50px_50px_0px_0px_#fff]
         w-24 aspect-square rounded-full
-        " />
-        <div className="
+        "
+        />
+        <div
+          className="
         absolute scale-125 bottom-0 right-0 -translate-x-[127%] -translate-y-3
         shadow-[50px_50px_0px_0px_#fff]
         w-24 aspect-square rounded-full 
-        " />
+        "
+        />
         <div className="absolute scale-[1.3] bottom-0 right-0 w-24 aspect-square bg-background rounded-full" />
         <motion.div
           transition={{
@@ -66,12 +73,14 @@ const CurvedBadgeCard = ({ title, content, icon }: Props) => {
           }}
           initial={{
             scale: 0,
-            opacity: 0
+            opacity: 0,
           }}
           whileInView={{
-            scale: 1, opacity: 1
+            scale: 1,
+            opacity: 1,
           }}
-          className="text-white absolute bottom-0 right-0 w-24 aspect-square bg-blue-600 rounded-full flex items-center justify-center ">
+          className="text-white absolute bottom-0 right-0 w-24 aspect-square bg-blue-600 rounded-full flex items-center justify-center "
+        >
           {icon}
         </motion.div>
       </div>

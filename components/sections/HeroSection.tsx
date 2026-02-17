@@ -1,8 +1,8 @@
-import { ChevronRight } from "lucide-react"
-import { Button } from "../ui/button"
-import { AccentUnderline, GradientText } from "../ui/textEffects"
+import { ChevronRight } from "lucide-react";
+import { Button } from "../ui/button";
+import { AccentUnderline, GradientText } from "../ui/textEffects";
 
-interface Props { }
+interface Props {}
 
 const HeroSection = (_: Props) => {
   return (
@@ -12,10 +12,19 @@ const HeroSection = (_: Props) => {
         className="flex flex-col text-center h-11/12 text-gray-100 pt-20 bg-no-repeat bg-top bg-cover rounded-2xl items-center space-y-5"
       >
         <h1 className="text-6xl italic font-semibold ">
-          <GradientText>Stop Translating.<br />Start Speaking</GradientText>
+          <GradientText>
+            Stop Translating.
+            <br />
+            Start Speaking
+          </GradientText>
         </h1>
-        <p className="w-[45ch] text-xl">Master English conversation
-          with <AccentUnderline className="text-2xl">expert traners</AccentUnderline> and <AccentUnderline className="text-2xl">proven methods</AccentUnderline> that deliver real results</p>
+        <p className="w-[45ch] text-xl">
+          Master English conversation with{" "}
+          <AccentUnderline className="text-2xl">expert traners</AccentUnderline>{" "}
+          and{" "}
+          <AccentUnderline className="text-2xl">proven methods</AccentUnderline>{" "}
+          that deliver real results
+        </p>
         <div className="flex space-x-5">
           {/* TODO: WHere does this buttom go? */}
           <Button>
@@ -28,7 +37,7 @@ const HeroSection = (_: Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

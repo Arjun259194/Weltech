@@ -8,7 +8,7 @@ export default function BookSection() {
       <Carousel>
         <CarouselContent>
           {Array(4).fill(0).map((_, i) => {
-            return <CarouselItem>
+            return <CarouselItem key={i}>
               <Book
                 key={i}
                 img="/book-cover.jpg"

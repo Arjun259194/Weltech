@@ -14,10 +14,11 @@ interface Props {
 export default function ReviewCard(props: Props) {
   const wholeStarts = Math.floor(props.rating);
   const halfStar = props.rating % 1 != 0;
+  const content = props.content.length > 200 ? props.content.slice(0, 200 - 3) + "..." : props.content;
   return (
-    <article className="group w-full relative h-full">
-      <div className="absolute inset-0 flex flex-col justify-end border-2 border-border transition-transform duration-500 ease-in-out rounded-2xl p-2 group-hover:translate-y-32">
-        <p className="mb-8">{props.content}</p>
+    <article className="group w-5/6 mx-auto md:w-full relative h-full">
+      <div className="absolute inset-2 flex flex-col justify-end bg-background transition-transform duration-500 ease-in-out rounded-2xl p-2 group-hover:translate-y-32">
+        <p className="mb-8">{content}</p>
         <Button variant="outline">More</Button>
       </div>
       <div className="absolute inset-0 rounded-2xl shadow-gray-900 shadow-sm group-hover:-translate-y-14 transition-transform duration-500 ease-in-out">
@@ -28,13 +29,13 @@ export default function ReviewCard(props: Props) {
           width={400}
           height={300}
         />
-        <div className="absolute grid grid-cols-3 text-white pointer-events-none rounded-2xl bg-linear-to-t from-gray-900/60 to-transparent inset-0  px-4 py-2">
+        <div className="absolute grid grid-cols-3 text-white pointer-events-none rounded-2xl bg-linear-to-t from-gray-900/80 to-transparent inset-0 p-5  md:px-4 md:py-2">
           <div className="flex flex-col justify-end col-span-2 ">
             <span className="text-4xl font-semibold">{props.name}</span>
             <AccentUnderline className="text-xl">
               {props.position}
             </AccentUnderline>
-            <p className="text-sm md:hidden">{props.content}</p>
+            <p className="text-sm pt-3 md:hidden">{content}</p>
           </div>
           <div className="flex flex-col justify-end space-y-3 items-end text-accent  p-1">
             {Array(wholeStarts)

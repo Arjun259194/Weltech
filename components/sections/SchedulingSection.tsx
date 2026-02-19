@@ -1,5 +1,7 @@
 import { Clock9 } from "lucide-react";
-import { AccentUnderline, PrimeText } from "../ui/textEffects";
+import { AccentUnderline } from "../ui/textEffects";
+import { ReactNode } from "react";
+import CountUp from "../CountUp";
 
 export default function SchedulingSection() {
   return (
@@ -15,13 +17,16 @@ export default function SchedulingSection() {
           and improving their English communication skills.
         </p>
         <div className="md:flex md:justify-around space-y-10 md:space-y-0 w-full md:p-5">
-          <SchedulingCard title="Morning batch" time="8:00 AM - 11:00 AM" />
-          <SchedulingCard
-            prime
-            title="Afternoon batch"
-            time="12:00 PM - 5:00 PM"
-          />
-          <SchedulingCard title="Evening batch" time="6:00 AM - 8:00 PM" />
+          <SchedulingCard title="Morning batch" time={<>
+            <CountUp duration={1} from={0} to={8} />:00 AM to <CountUp duration={1} from={0} to={11} />:00 AM
+          </>} />
+          {/* <SchedulingCard prime title="Afternoon batch" time="12:00 PM to 5:00 PM" /> */}
+          <SchedulingCard prime title="Afternoon batch" time={<>
+            <CountUp duration={1} from={0} to={12} />:00 PM to <CountUp from={0} to={5} />:00 PM
+          </>} />
+          <SchedulingCard title="Evening batch" time={<>
+            <CountUp duration={1} from={0} to={6} />:00 AM to <CountUp duration={1} from={0} to={8} />:00 PM
+          </>} />
         </div>
       </div>
     </section>
@@ -31,31 +36,39 @@ export default function SchedulingSection() {
 interface Props {
   title: string;
   prime?: boolean;
-  time: string;
+  time: string | ReactNode
 }
 
 const SchedulingCard = (props: Props) => {
   return (
-    <div className="relative mx-auto w-80 max-h-80 min-h-64 ">
+    <div className="relative mx-auto w-80 max-h-80 min-h-64 group">
       {/* Yellow layer behind — offset bottom-right */}
 
-      {props.prime ? <div className="absolute right-0 bg-accent text-foreground px-2 py-1 rounded-full z-20 text-xs -translate-y-2/3">Most Prefered</div> : null}
+      {props.prime ? <div className="absolute
+        transition-all duration-200 ease-in-out
+        right-0 bg-accent text-foreground px-2 py-1 rounded-full z-20 text-xs -translate-y-2/3">Most Prefered</div> : null}
       <div
         className="absolute 
         right-0 top-0 bottom-1/2 left-1/2
-        bg-accent rounded-tr-2xl translate-x-2 -translate-y-2
+        bg-accent rounded-tr-2xl 
+        translate-x-1 -translate-y-1
+        group-hover:translate-x-3 group-hover:-translate-y-3
+        transition-all duration-200 ease-in-out
         z-0"
       />
       <div
         className="absolute 
         right-1/2 bottom-0 top-1/2 left-0
-        bg-accent rounded-bl-2xl -translate-x-2 translate-y-2
+        bg-accent rounded-bl-2xl 
+        -translate-x-1 translate-y-1
+        group-hover:-translate-x-3 group-hover:translate-y-3
+        transition-all duration-200 ease-in-out
         z-0"
       />
 
       {/* Blue card on top */}
       <div
-        className={`absolute inset-0 z-10 border border-gray-200 ${props.prime ? "bg-primary" : "bg-background"} rounded-2xl p-6 flex flex-col justify-between`}
+        className={`absolute shadow-none group-hover:shadow-md inset-0 z-10 border border-gray-200 ${props.prime ? "bg-primary" : "bg-background"} rounded-2xl p-6 flex flex-col justify-between`}
       >
         {/* Top section */}
         <div className="flex justify-between items-start">

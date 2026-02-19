@@ -1,5 +1,6 @@
 import BookSection from "@/components/sections/BookSection";
 import FeatureSection from "@/components/sections/FeatureSection";
+import Footer from "@/components/sections/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ReviewSection from "@/components/sections/ReviewSection";
 import SchedulingSection from "@/components/sections/SchedulingSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ReviewSection />
       <SchedulingSection />
       <BookSection />
+      <Footer />
     </div>
   );
 }

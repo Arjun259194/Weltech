@@ -29,13 +29,13 @@ export default function ReviewCard(props: Props) {
           width={400}
           height={300}
         />
-        <div className="absolute grid grid-cols-3 text-white pointer-events-none rounded-2xl bg-linear-to-t from-gray-900/80 to-transparent inset-0 p-5  md:px-4 md:py-2">
-          <div className="flex flex-col justify-end col-span-2 ">
+        <div className="absolute grid grid-cols-5 text-white pointer-events-none rounded-2xl bg-linear-to-t from-gray-900/80 to-transparent inset-0 p-5  md:px-4 md:py-2">
+          <div className="flex flex-col justify-end col-span-4 ">
             <span className="text-4xl font-semibold">{props.name}</span>
             <AccentUnderline className="text-xl">
               {props.position}
             </AccentUnderline>
-            <p className="text-sm pt-3 md:hidden">{content}</p>
+            <p className="text-sm  pt-3 md:hidden">{content}</p>
           </div>
           <div className="flex flex-col justify-end space-y-3 items-end text-accent  p-1">
             {Array(wholeStarts)

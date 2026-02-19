@@ -15,12 +15,26 @@ const OFFICE = {
 export default function LeafletMap() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<unknown>(null);
+  const initializedRef = useRef(false);
 
   useEffect(() => {
-    if (mapRef.current || !containerRef.current) return;
+    if (initializedRef.current || !containerRef.current) return;
+    initializedRef.current = true;
 
     // Dynamically import Leaflet (client-only)
     import("leaflet").then((L) => {
+      if (!containerRef.current) return;
+
+      // In React Strict Mode dev, effects can run twice; if Leaflet
+      // already attached a map to this container, clear its internal id.
+      const anyContainer = containerRef.current as unknown as {
+        _leaflet_id?: number;
+      };
+      if (anyContainer._leaflet_id != null) {
+        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+        delete anyContainer._leaflet_id;
+      }
+
       // Fix the broken default icon path that Webpack/Next.js causes
       // @ts-expect-error — Leaflet internal
       delete L.Icon.Default.prototype._getIconUrl;

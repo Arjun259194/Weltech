@@ -53,7 +53,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
   if (!data) notFound();
 
   return (
-    <main className="min-h-screen bg-background p-8 lg:p-16">
+    <main className="min-h-screen bg-background px-4 py-8 sm:px-6 lg:px-16">
       <div className="mx-auto max-w-5xl">
 
         {/* Editorial Header - Matches About Page Style */}
@@ -61,7 +61,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
           <p className="font-[Caveat] text-lg text-primary tracking-wide mb-3">
             Weltech Curriculum &nbsp;/&nbsp; {data.tag}
           </p>
-          <h1 className="font-[PT_Serif] text-5xl font-bold leading-tight text-foreground sm:text-6xl">
+          <h1 className="font-[PT_Serif] text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
             {data.title}
           </h1>
 
@@ -72,7 +72,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
                 Focus: {data.tag}
               </span>
             </div>
-            <p className="text-lg leading-relaxed text-foreground/60">
+            <p className="text-base sm:text-lg leading-relaxed text-foreground/60">
               {data.description}
             </p>
           </div>
@@ -81,7 +81,7 @@ export default async function page({ params }: { params: Promise<{ slug: string 
         {/* Modules Grid - Uses the StatCard/PillarCard logic */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {data.modules.map((module, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-white p-8 shadow-sm transition-all hover:shadow-md">
+            <div key={i} className="group relative overflow-hidden rounded-2xl border border-primary/10 bg-white p-6 sm:p-8 shadow-sm transition-all hover:shadow-md">
               <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-primary/5 transition-transform duration-500 group-hover:scale-150" />
 
               <p className="font-[PT_Serif] text-4xl font-bold text-primary/20 mb-4 italic">0{i + 1}</p>
@@ -97,10 +97,10 @@ export default async function page({ params }: { params: Promise<{ slug: string 
         </div>
 
         {/* Call to Action - The Weltech "Journey" Block */}
-        <section className="mt-24">
-          <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-primary to-accent p-12 text-center text-white shadow-xl">
-            <p className="font-[Caveat] text-2xl opacity-80 italic">Stop translating.</p>
-            <h2 className="mt-2 font-[PT_Serif] text-4xl font-bold">Start Speaking.</h2>
+        <section className="mt-20 sm:mt-24">
+          <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-primary to-accent px-6 py-10 sm:px-10 sm:py-12 text-center text-white shadow-xl">
+            <p className="font-[Caveat] text-xl sm:text-2xl opacity-80 italic">Stop translating.</p>
+            <h2 className="mt-2 font-[PT_Serif] text-3xl sm:text-4xl font-bold">Start Speaking.</h2>
             <div className="mt-8 flex justify-center">
               <button className="h-12 items-center rounded-full bg-white px-10 text-sm font-bold text-primary shadow transition-transform hover:scale-105">
                 Launch Lesson Player

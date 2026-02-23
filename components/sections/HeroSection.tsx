@@ -8,7 +8,7 @@ const HeroSection = (_: Props) => {
   return (
     <section className="md:w-11/12 w-full mx-auto p-3 md:p-0 h-screen">
       <div
-        style={{ backgroundImage: "url('/Hero-BG.png')" }}
+        style={{ backgroundImage: "url('/assets/Hero-BG.png')" }}
         className="flex flex-col text-center px-2 md:px-0 h-11/12 text-gray-100 pt-20 bg-no-repeat bg-top bg-cover rounded-2xl items-center space-y-5"
       >
         <h1 className="md:text-6xl text-4xl  italic font-semibold ">

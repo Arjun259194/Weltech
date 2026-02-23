@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PT_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import { Analytics } from "@vercel/analytics/next"
 
 import { Caveat } from "next/font/google";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className={`${ptSerif.className} ${caveat.variable}  antialiased`}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );

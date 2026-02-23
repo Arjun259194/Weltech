@@ -42,7 +42,7 @@ export default function ReviewSection() {
               >
                 <ReviewCard
                   rating={3.5}
-                  img="/review.jpg"
+                  img="/assets/review.jpg"
                   content="I was stuck at 6 bands for months. After joining this institute, I improved my writing structure and speaking fluency. Within 4 weeks, I scored 7 bands. The strategies provided here actually work."
                   name="Riya Desai"
                   position="Software designer in australia"

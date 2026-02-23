@@ -19,7 +19,7 @@ function PrimeBackground() {
       <div
         className="absolute inset-0 bg-cover"
         style={{
-          backgroundImage: `url(/plane.jpg)`,
+          backgroundImage: `url(/assets/plane.jpg)`,
           backgroundPosition: "center 20%",
         }}
       />

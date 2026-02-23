@@ -20,7 +20,7 @@ export default function BookSection() {
                 <CarouselItem key={i}>
                   <Book
                     key={i}
-                    img="/book-cover.jpg"
+                    img="/assets/book-cover.jpg"
                     link="https://www.google.com/search?hl=en&q=books"
                     title={
                       <>

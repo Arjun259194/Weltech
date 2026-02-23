@@ -83,13 +83,11 @@ export const InfiniteMovingCards = ({
             scrollerRef.current.style.animationPlayState = "paused";
           }
         }}
-        onTouchEnd={
-          () => {
-            if (scrollerRef.current) {
-              scrollerRef.current.style.animationPlayState = "running";
-            }
+        onTouchEnd={() => {
+          if (scrollerRef.current) {
+            scrollerRef.current.style.animationPlayState = "running";
           }
-        }
+        }}
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
           start && "animate-scroll",

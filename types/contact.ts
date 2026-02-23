@@ -115,4 +115,3 @@ export const DEPT_COLORS: Record<string, string> = {
   Technology: "bg-violet-100 text-violet-700",
   Operations: "bg-amber-100 text-amber-700",
 };
-

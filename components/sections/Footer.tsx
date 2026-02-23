@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Phone,
@@ -9,29 +9,40 @@ import {
   Youtube,
   Facebook,
   Twitter,
-} from "lucide-react"
+} from "lucide-react";
 
 const footerLinks = {
   Company: ["About Us", "Our Trainers", "Admission", "Materials", "Contact"],
-}
+};
 
 const contacts = [
-  { Icon: MapPin, primary: "C-Arcade, Adajan", secondary: "Surat, Gujarat — 395009" },
-  { Icon: Phone, primary: "+91 98765 43210", secondary: "Mon – Sat, 9am – 7pm" },
-  { Icon: Mail, primary: "hello@weltech.in", secondary: "We reply within 24hrs" },
-]
+  {
+    Icon: MapPin,
+    primary: "C-Arcade, Adajan",
+    secondary: "Surat, Gujarat — 395009",
+  },
+  {
+    Icon: Phone,
+    primary: "+91 98765 43210",
+    secondary: "Mon – Sat, 9am – 7pm",
+  },
+  {
+    Icon: Mail,
+    primary: "hello@weltech.in",
+    secondary: "We reply within 24hrs",
+  },
+];
 
 const socials = [
   { Icon: Instagram, label: "Instagram" },
   { Icon: Youtube, label: "YouTube" },
   { Icon: Facebook, label: "Facebook" },
   { Icon: Twitter, label: "Twitter" },
-]
+];
 
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-background text-foreground font-serif">
-
       {/* Top Accent Line */}
       <div className="h-0.75 bg-linear-to-r from-transparent via-primary to-transparent opacity-70" />
 
@@ -45,9 +56,7 @@ export default function Footer() {
             <h2 className="text-4xl md:text-5xl font-bold italic leading-tight">
               Stop Translating.
               <br />
-              <span className="text-muted-foreground">
-                Start Speaking.
-              </span>
+              <span className="text-muted-foreground">Start Speaking.</span>
             </h2>
           </div>
 
@@ -68,7 +77,6 @@ export default function Footer() {
       {/* Main Grid */}
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold tracking-tight mb-1">
@@ -76,8 +84,8 @@ export default function Footer() {
             </div>
             <div className="w-9 h-0.5 bg-primary rounded mb-5" />
             <p className="font-sans text-sm text-muted-foreground leading-relaxed max-w-xs mb-6">
-              Surat's most trusted spoken English institute since 1981 —
-              helping students master IELTS, TOEFL, and fluent communication.
+              Surat's most trusted spoken English institute since 1981 — helping
+              students master IELTS, TOEFL, and fluent communication.
             </p>
 
             <div className="flex gap-3">
@@ -101,8 +109,10 @@ export default function Footer() {
           {/* Company Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="font-sans text-xs tracking-[0.22em] uppercase
-                             text-muted-foreground font-semibold mb-6">
+              <h4
+                className="font-sans text-xs tracking-[0.22em] uppercase
+                             text-muted-foreground font-semibold mb-6"
+              >
                 {title}
               </h4>
               <ul className="flex flex-col gap-4">
@@ -124,16 +134,20 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-xs tracking-[0.22em] uppercase
-                           text-muted-foreground font-semibold mb-6">
+            <h4
+              className="font-sans text-xs tracking-[0.22em] uppercase
+                           text-muted-foreground font-semibold mb-6"
+            >
               Find Us
             </h4>
             <ul className="flex flex-col gap-6">
               {contacts.map(({ Icon, primary, secondary }) => (
                 <li key={primary} className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-md bg-primary/10
+                  <div
+                    className="w-8 h-8 rounded-md bg-primary/10
                                   border border-primary/20
-                                  flex items-center justify-center mt-1">
+                                  flex items-center justify-center mt-1"
+                  >
                     <Icon size={14} className="text-primary" />
                   </div>
                   <div>
@@ -148,7 +162,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
         </div>
       </div>
 
@@ -156,7 +169,8 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
           <p className="font-sans text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Weltech English Institute · Est. 1981 · Surat, India
+            © {new Date().getFullYear()} Weltech English Institute · Est. 1981 ·
+            Surat, India
           </p>
           <div className="flex gap-6">
             {["Privacy Policy", "Terms", "Sitemap"].map((item) => (
@@ -171,7 +185,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
-  )
+  );
 }

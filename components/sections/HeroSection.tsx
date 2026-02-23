@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { AccentUnderline, GradientText } from "../ui/textEffects";
 
-interface Props { }
+interface Props {}
 
 const HeroSection = (_: Props) => {
   return (

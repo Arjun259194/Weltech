@@ -51,4 +51,3 @@ export function TeamContactCard({ m }: TeamContactCardProps) {
     </div>
   );
 }
-

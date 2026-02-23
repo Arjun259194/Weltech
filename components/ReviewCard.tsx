@@ -14,7 +14,10 @@ interface Props {
 export default function ReviewCard(props: Props) {
   const wholeStarts = Math.floor(props.rating);
   const halfStar = props.rating % 1 != 0;
-  const content = props.content.length > 200 ? props.content.slice(0, 200 - 3) + "..." : props.content;
+  const content =
+    props.content.length > 200
+      ? props.content.slice(0, 200 - 3) + "..."
+      : props.content;
   return (
     <article className="group w-5/6 mx-auto md:w-full relative h-full">
       <div className="absolute inset-2 flex flex-col justify-end bg-background transition-transform duration-500 ease-in-out rounded-2xl p-2 group-hover:translate-y-32">

@@ -18,11 +18,7 @@ export function BillingToggle({ annual, onToggle }: BillingToggleProps) {
       >
         Monthly
       </Label>
-      <Switch
-        id="billing-toggle"
-        checked={annual}
-        onCheckedChange={onToggle}
-      />
+      <Switch id="billing-toggle" checked={annual} onCheckedChange={onToggle} />
       <Label
         htmlFor="billing-toggle"
         className={`text-sm font-medium cursor-pointer transition-colors ${

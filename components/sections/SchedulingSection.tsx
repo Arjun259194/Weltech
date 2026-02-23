@@ -11,22 +11,46 @@ export default function SchedulingSection() {
           Our Batch <span className="text-accent">Structure</span>
         </h2>
         <p className="md:w-2/3 md:mx-auto mx-3 mb-10 md:mb-5">
-          Our students come from different academic and professional backgrounds,
-          but they all share one goal achieving their desired{" "}
-          <AccentUnderline className="text-2xl">IELTS band score</AccentUnderline>{" "}
+          Our students come from different academic and professional
+          backgrounds, but they all share one goal achieving their desired{" "}
+          <AccentUnderline className="text-2xl">
+            IELTS band score
+          </AccentUnderline>{" "}
           and improving their English communication skills.
         </p>
         <div className="md:flex md:justify-around space-y-10 md:space-y-0 w-full md:p-5">
-          <SchedulingCard title="Morning batch" time={<>
-            <CountUp duration={1} from={0} to={8} />:00 AM to <CountUp duration={1} from={0} to={11} />:00 AM
-          </>} />
+          <SchedulingCard
+            title="Morning batch"
+            time={
+              <>
+                <CountUp duration={1} from={0} to={8} />
+                :00 AM to <CountUp duration={1} from={0} to={11} />
+                :00 AM
+              </>
+            }
+          />
           {/* <SchedulingCard prime title="Afternoon batch" time="12:00 PM to 5:00 PM" /> */}
-          <SchedulingCard prime title="Afternoon batch" time={<>
-            <CountUp duration={1} from={0} to={12} />:00 PM to <CountUp from={0} to={5} />:00 PM
-          </>} />
-          <SchedulingCard title="Evening batch" time={<>
-            <CountUp duration={1} from={0} to={6} />:00 AM to <CountUp duration={1} from={0} to={8} />:00 PM
-          </>} />
+          <SchedulingCard
+            prime
+            title="Afternoon batch"
+            time={
+              <>
+                <CountUp duration={1} from={0} to={12} />
+                :00 PM to <CountUp from={0} to={5} />
+                :00 PM
+              </>
+            }
+          />
+          <SchedulingCard
+            title="Evening batch"
+            time={
+              <>
+                <CountUp duration={1} from={0} to={6} />
+                :00 AM to <CountUp duration={1} from={0} to={8} />
+                :00 PM
+              </>
+            }
+          />
         </div>
       </div>
     </section>
@@ -36,7 +60,7 @@ export default function SchedulingSection() {
 interface Props {
   title: string;
   prime?: boolean;
-  time: string | ReactNode
+  time: string | ReactNode;
 }
 
 const SchedulingCard = (props: Props) => {
@@ -44,9 +68,15 @@ const SchedulingCard = (props: Props) => {
     <div className="relative mx-auto w-80 max-h-80 min-h-64 group">
       {/* Yellow layer behind — offset bottom-right */}
 
-      {props.prime ? <div className="absolute
+      {props.prime ? (
+        <div
+          className="absolute
         transition-all duration-200 ease-in-out
-        right-0 bg-accent text-foreground px-2 py-1 rounded-full z-20 text-xs -translate-y-2/3">Most Prefered</div> : null}
+        right-0 bg-accent text-foreground px-2 py-1 rounded-full z-20 text-xs -translate-y-2/3"
+        >
+          Most Prefered
+        </div>
+      ) : null}
       <div
         className="absolute 
         right-0 top-0 bottom-1/2 left-1/2

@@ -24,14 +24,13 @@ export default function ReviewSection() {
             <PrimeText className="font-bold">Who Matter</PrimeText>{" "}
           </h2>
           <p className="md:w-2/3 text-lg">
-            Our students come from different academic and professional backgrounds,
-            but they all share one goal achieving their desired{" "}
+            Our students come from different academic and professional
+            backgrounds, but they all share one goal achieving their desired{" "}
             <AccentUnderline className="text-2xl" underline>
               IELTS band score
             </AccentUnderline>{" "}
             and improving their English communication skills.
           </p>
-
         </div>
         <InfiniteMovingCards
           className="mt-10 md:mb-36 mb-24"

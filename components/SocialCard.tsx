@@ -34,4 +34,3 @@ export function SocialCard({ s }: SocialCardProps) {
     </a>
   );
 }
-

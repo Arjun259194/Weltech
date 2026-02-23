@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import dynamic from "next/dynamic";
 
 const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
@@ -60,4 +60,3 @@ export function ContactMapSection() {
     </section>
   );
 }
-

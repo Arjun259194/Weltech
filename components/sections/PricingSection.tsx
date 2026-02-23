@@ -8,7 +8,5 @@ export default function PricingSection() {
         No credit card required · Cancel anytime · SOC 2 Compliant
       </p>
     </section>
-
-  )
+  );
 }
-

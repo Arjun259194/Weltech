@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { PLANS } from "./plans";
 import { PricingHeader } from "./PricingHeader";

@@ -6,7 +6,7 @@
 import { useEffect, useRef } from "react";
 
 const OFFICE = {
-  lat: 21.1839,   // Surat Ring Road approximate coordinates
+  lat: 21.1839, // Surat Ring Road approximate coordinates
   lng: 72.8322,
   label: "Weltech English Institute",
   address: "Harmony Complex, Ring Road, Surat – 395 002",
@@ -41,8 +41,7 @@ export default function LeafletMap() {
       L.Icon.Default.mergeOptions({
         iconRetinaUrl:
           "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-        iconUrl:
-          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
         shadowUrl:
           "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
       });
@@ -110,7 +109,7 @@ export default function LeafletMap() {
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
           subdomains: "abcd",
           maxZoom: 20,
-        }
+        },
       ).addTo(map);
 
       // Marker + popup
@@ -139,7 +138,7 @@ export default function LeafletMap() {
               "
             >Open in Google Maps ↗</a>
           </div>`,
-          { maxWidth: 260 }
+          { maxWidth: 260 },
         )
         .openPopup();
     });

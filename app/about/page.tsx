@@ -129,7 +129,9 @@ export default function AboutPage() {
             {/* left: decorative rule + est. tag */}
             <div className="flex flex-col gap-3 pt-1">
               <div className="h-px w-full bg-foreground/10" />
-              <span className="font-[Caveat] text-sm text-foreground/40">Est. 2015 · Surat, Gujarat</span>
+              <span className="font-[Caveat] text-sm text-foreground/40">
+                Est. 2015 · Surat, Gujarat
+              </span>
             </div>
 
             {/* right: standfirst copy */}
@@ -138,7 +140,9 @@ export default function AboutPage() {
               hesitant speakers into confident global communicators. From
               morning batches to evening drills, our spoken-English and IELTS
               programmes have helped{" "}
-              <strong className="font-semibold text-foreground">4,000+ students</strong>{" "}
+              <strong className="font-semibold text-foreground">
+                4,000+ students
+              </strong>{" "}
               across Surat find their voice — and their band score.
             </p>
           </div>
@@ -150,8 +154,16 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-4">
           <StatCard value="9+" label="Years Active" note="Est. 2015" />
           <StatCard value="4 000+" label="Students Trained" />
-          <StatCard value="7.5" label="Avg. IELTS Band" note="across graduates" />
-          <StatCard value="3" label="Daily Batches" note="Morning · Afternoon · Evening" />
+          <StatCard
+            value="7.5"
+            label="Avg. IELTS Band"
+            note="across graduates"
+          />
+          <StatCard
+            value="3"
+            label="Daily Batches"
+            note="Morning · Afternoon · Evening"
+          />
         </div>
       </section>
 

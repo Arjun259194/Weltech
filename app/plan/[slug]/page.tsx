@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+export const dynamicParams = false; // Add this line
+
 const courses = {
   "grammar": {
     title: "Grammar & Syntax",
@@ -44,6 +46,12 @@ const courses = {
     modules: ["The 'Tell Me About Yourself' Hook", "Handling Tough Questions", "Body Language & Tone"]
   }
 };
+
+export async function generateStaticParams() {
+  return Object.keys(courses).map(slug => {
+    return { slug }
+  })
+}// will this work
 
 export default async function page({ params }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug
